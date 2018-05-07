@@ -17,14 +17,11 @@ public class SampleView {
         final JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panel.setBackground(Color.red);
 
-        panel.add(createButton("a", 40, 40));
-        panel.add(createButton("b", 40, 40));
-        panel.add(createButton("c", 40, 40));
-        panel.add(createButton("d", 40, 40));
-        panel.add(createButton("e", 40, 40));
-        panel.add(createButton("f", 40, 40));
-        panel.add(createButton("g", 40, 40));
-        panel.add(createButton("h", 40, 40));
+        panel.add(createButton("1", 40, 40));
+        panel.add(createButton("2", 40, 40));
+        panel.add(createButton("3", 40, 40));
+        panel.add(createButton("4", 40, 40));
+        panel.add(createButton("5", 40, 40));
 
         return panel;
     }
