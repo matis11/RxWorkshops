@@ -1,11 +1,15 @@
 package view;
 
+import presenter.SamplePresenter;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SampleView {
+
+    private SamplePresenter presenter = new SamplePresenter();
 
     private JButton createButton(String text, int width, int height) {
         final JButton button = new JButton(text);
@@ -17,11 +21,10 @@ public class SampleView {
         final JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panel.setBackground(Color.red);
 
-        panel.add(createButton("1", 40, 40));
-        panel.add(createButton("2", 40, 40));
-        panel.add(createButton("3", 40, 40));
-        panel.add(createButton("4", 40, 40));
-        panel.add(createButton("5", 40, 40));
+        presenter.getDataToDisplay()
+                .subscribe(strings -> {
+                    panel.add(createButton("1213", 40, 40));
+                });
 
         return panel;
     }
